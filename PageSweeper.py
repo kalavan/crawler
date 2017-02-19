@@ -21,11 +21,9 @@ def loop_through_olx(start_url):
             print "No more links to follow."
     return links_found
 
-# links = loop_through_olx("https://www.olx.pl/nieruchomosci/mieszkania/?page=499")
-# links = loop_through_olx("https://www.olx.pl/nieruchomosci/mieszkania/")
-links = loop_through_olx("https://www.olx.pl/nieruchomosci/mieszkania/wynajem/?page=499")
-print "Found %s links. Links are:" % len(links)
-for link in links:
-    print link
+# links = loop_through_olx("https://www.olx.pl/nieruchomosci/mieszkania/wynajem/?page=499")
+# print "Found %s links. Links are:" % len(links)
+# for link in links:
+#     print link
 
 # vim: expandtab:ts=4:sw=4:sts=4
