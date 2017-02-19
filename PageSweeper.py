@@ -21,20 +21,6 @@ def loop_through_olx(start_url):
             print "No more links to follow."
     return links_found
 
-
-# def find_links(link_list):
-#     links_found = []
-#     for link in link_list:
-#         print link.url
-#
-#     for link in link_list:
-#         for attr in link.attrs:
-#             if attr[0] == 'class':
-#                 if "marginright5 link linkWithHash detailsLink" in attr[1]:
-#                     links_found.append(link.url)
-#     return links_found
-
-
 # links = loop_through_olx("https://www.olx.pl/nieruchomosci/mieszkania/?page=499")
 # links = loop_through_olx("https://www.olx.pl/nieruchomosci/mieszkania/")
 links = loop_through_olx("https://www.olx.pl/nieruchomosci/mieszkania/wynajem/?page=499")
