@@ -1,6 +1,4 @@
-import pymongo
-import datetime
-import pprint
+import db_access
 from pymongo import MongoClient, collection
 from PageSweeper import loop_through_olx
 
@@ -8,7 +6,7 @@ status = "NEW"
 statusFieldName = "status"
 urlFieldName = "url"
 olxURL = "https://www.olx.pl/nieruchomosci/mieszkania/wynajem/?page=1"
-mongoUrl = 'mongodb://pblo28:test28@ds037571.mlab.com:37571/targets'
+mongoUrl = 'mongodb://%s:%s@ds037571.mlab.com:37571/targets' % (db_access.db['user'], db_access.db['password'])
 
 def fulfillDatabaseWithOlxLinks(olxLinks, mongoUrl, urlFieldName, statusFieldName, status):
     client = MongoClient(mongoUrl)
